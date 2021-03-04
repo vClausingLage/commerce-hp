@@ -1,16 +1,21 @@
 import * as React from 'react';
 import picture from '../pictures/pic2.jpg';
 
-function Card() {
-  let title = 'title';
-  let description = 'description';
-  let alt = 'data';
+interface CardProps {
+  title: string;
+  description: string;
+}
+
+const Card = (props: CardProps): JSX.Element => {
+  //let title = 'title';
+  //let description = 'description';
+  let alt = 'product thumbnail';
 
   return (
     <>
       <div className='card-container'>
         <div className='card-title'>
-          <h2>{title}</h2>
+          <h2>{props.title}</h2>
         </div>
         <div className='card-picture'>
           <figure>
@@ -18,11 +23,11 @@ function Card() {
           </figure>
         </div>
         <div className='card-description'>
-          <p>{description}</p>
+          <p>{props.description}</p>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default Card;
