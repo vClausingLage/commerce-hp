@@ -1,0 +1,113 @@
+/* BODY */
+
+* {
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  background-color: rgb(237, 237, 238);
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 10rem) {
+  .sleeve {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 3rem;
+  }
+  .left-side {
+    padding: 0.3rem;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+    font-size: larger;
+  }
+  .right-side {
+    padding: 0.3rem;
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-size: larger;
+  }
+}
+@media (min-width: 40rem) {
+  .sleeve {
+    display: grid;
+    grid-template-columns: 5rem auto 5rem;
+  }
+  .left-side {
+    padding: 1rem;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+    font-size: larger;
+  }
+  .right-side {
+    padding: 1rem;
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-size: larger;
+  }
+}
+@media (min-width: 100rem) {
+  .sleeve {
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr;
+  }
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #a631aa;
+}
+
+/* DEFAULTS */
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* NAV */
+
+nav {
+  height: 100px;
+}
+
+.logo {
+  height: 60px;
+}
+
+/* FLEX N GRID */
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  text-align: center;
+}
+
+/* BOXES TEST */
+
+.box {
+  border: 2px solid blue;
+  margin: auto;
+  margin-top: 0.3rem;
+  padding: 1rem;
+  outline: rgba(128, 128, 128, 0.5) solid 2px;
+}
