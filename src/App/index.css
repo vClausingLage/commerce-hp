@@ -166,3 +166,8 @@ img {
 .card-description {
   padding: 1rem 1rem;
 }
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}

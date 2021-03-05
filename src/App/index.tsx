@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './index.css';
 
 import Landing from '../components/landing';
-import Products from '../components/products'
-import logo from '../pictures/logo.jpeg';
+import Products from '../components/products';
 
 function App() {
   return (
@@ -12,11 +11,17 @@ function App() {
       <Router>
         <nav className='flex nav'>
           <figure>
-            <img alt='dat logo' src={logo} className='logo' />
+            <img alt='dat logo' src='/images/logo.jpeg' className='logo' />
           </figure>
-          <Link className="navBtn" to={'/landing'}>Home</Link>
-          <Link className="navBtn" to={'/products'}>Products</Link>
-          <Link className="navBtn" to={'/cart'}>Cart</Link>
+          <Link className='navBtn' to={'/landing'}>
+            Home
+          </Link>
+          <Link className='navBtn' to={'/products'}>
+            Products
+          </Link>
+          <Link className='navBtn' to={'/cart'}>
+            Cart
+          </Link>
         </nav>
 
         <Switch>

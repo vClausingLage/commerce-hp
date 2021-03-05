@@ -1,14 +1,15 @@
 import * as React from 'react';
-import picture from '../pictures/pic2.jpg';
 
 interface CardProps {
   title: string;
   description: string;
+  price: number;
+  picture: string;
 }
 
+let testVar = '...';
+
 const Card = (props: CardProps): JSX.Element => {
-  //let title = 'title';
-  //let description = 'description';
   let alt = 'product thumbnail';
 
   return (
@@ -19,7 +20,7 @@ const Card = (props: CardProps): JSX.Element => {
         </div>
         <div className='card-picture'>
           <figure>
-            <img alt={alt} src={picture} />
+            <img alt={alt} src={props.picture} />
           </figure>
         </div>
         <div className='card-description'>
