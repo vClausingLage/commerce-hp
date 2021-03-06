@@ -5,6 +5,7 @@ interface CardProps {
   description: string;
   price: number;
   picture: string;
+  onClick: React.MouseEventHandler;
 }
 
 let testVar = '...';

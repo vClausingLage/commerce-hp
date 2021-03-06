@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Card from './card.component';
 
 function Products() {
@@ -10,17 +10,23 @@ function Products() {
   }[] = [
     {
       title: 'Product 1',
-      description: 'Does it all',
+      description:
+        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam',
       price: 15,
       picture: '/images/pic2.jpg',
     },
     {
       title: 'Product 2',
-      description: 'Does it even better',
+      description:
+        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam',
       price: 20,
       picture: '/images/pic3.jpg',
     },
   ];
+
+  function clickCard(event: any) {
+    alert('clicked!');
+  }
 
   return (
     <>
@@ -33,6 +39,7 @@ function Products() {
             description={item.description}
             price={item.price}
             picture={item.picture}
+            onClick={(e) => clickCard(e)}
           />
         ))}
       </div>
