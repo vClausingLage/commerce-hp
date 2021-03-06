@@ -13,7 +13,7 @@ function App() {
           <figure>
             <img alt='dat logo' src='/images/logo.jpeg' className='logo' />
           </figure>
-          <Link className='navBtn' to={'/landing'}>
+          <Link className='navBtn' to={'/'}>
             Home
           </Link>
           <Link className='navBtn' to={'/products'}>
@@ -25,11 +25,11 @@ function App() {
         </nav>
 
         <Switch>
-          <Route path={'/landing'}>
-            <Landing />
-          </Route>
           <Route path={'/products'}>
             <Products />
+          </Route>
+          <Route path={'/'}>
+            <Landing />
           </Route>
         </Switch>
       </Router>

@@ -11,6 +11,12 @@ body {
   margin: 0;
   padding-left: 1rem;
   padding-right: 1rem;
+  background-image: linear-gradient(
+    179deg,
+    rgb(128, 0, 0) 9rem,
+    white calc(9rem + 5px)
+  );
+  min-height: 100vh;
 }
 
 @media (min-width: 10rem) {
@@ -70,7 +76,7 @@ body {
 /* DEFAULTS */
 
 h1 {
-  margin: auto;
+  margin: 5rem auto 2rem auto;
   text-align: center;
 }
 h2 {
@@ -121,9 +127,9 @@ img {
 
 .navBtn {
   display: flex;
-  color: red;
+  color: white;
   padding: 1rem;
-  background-color: blue;
+  background-color: rgb(128, 0, 0);
   margin-left: 1rem;
 }
 
