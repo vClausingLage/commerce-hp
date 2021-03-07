@@ -4,6 +4,7 @@ import './index.css';
 
 import Landing from '../components/landing';
 import Products from '../components/products';
+import Cart from '../components/cart';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         <Switch>
           <Route path={'/products'}>
             <Products />
+          </Route>
+          <Route path={'/cart'}>
+            <Cart />
           </Route>
           <Route path={'/'}>
             <Landing />

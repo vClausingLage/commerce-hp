@@ -24,10 +24,6 @@ function Products() {
     },
   ];
 
-  function clickCard(event: any) {
-    alert('clicked!');
-  }
-
   return (
     <>
       <h1>Products</h1>
@@ -39,7 +35,6 @@ function Products() {
             description={item.description}
             price={item.price}
             picture={item.picture}
-            onClick={(e) => clickCard(e)}
           />
         ))}
       </div>

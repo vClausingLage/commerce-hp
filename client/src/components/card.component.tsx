@@ -5,13 +5,31 @@ interface CardProps {
   description: string;
   price: number;
   picture: string;
-  onClick: React.MouseEventHandler;
 }
 
-let testVar = '...';
+interface ButtonProps {
+  buttonName: string;
+  buttonStyle: string;
+}
 
-const Card = (props: CardProps): JSX.Element => {
+const ButtonComponent: React.FunctionComponent<ButtonProps> = (props) => {
+  function clickMe() {
+    alert('clicked!');
+  }
+
+  return (
+    <>
+      <button onClick={clickMe} className={props.buttonStyle}>
+        {props.buttonName}
+      </button>
+    </>
+  );
+};
+
+const Card: React.FunctionComponent<CardProps> = (props) => {
   let alt = 'product thumbnail';
+  let buttonName = 'to cart...';
+  let buttonStyle = 'card-button';
 
   return (
     <>
@@ -27,6 +45,7 @@ const Card = (props: CardProps): JSX.Element => {
         <div className='card-description'>
           <p>{props.description}</p>
         </div>
+        <ButtonComponent buttonName={buttonName} buttonStyle={buttonStyle} />
       </div>
     </>
   );
