@@ -5,21 +5,23 @@ interface CardProps {
   description: string;
   price: number;
   picture: string;
+  index: number;
 }
 
 interface ButtonProps {
   buttonName: string;
   buttonStyle: string;
+  index: number;
 }
 
 const ButtonComponent: React.FunctionComponent<ButtonProps> = (props) => {
   function clickMe() {
-    alert('clicked!');
+    console.log();
   }
 
   return (
     <>
-      <button onClick={clickMe} className={props.buttonStyle}>
+      <button onClick={(e) => clickMe()} className={props.buttonStyle}>
         {props.buttonName}
       </button>
     </>
@@ -45,7 +47,11 @@ const Card: React.FunctionComponent<CardProps> = (props) => {
         <div className='card-description'>
           <p>{props.description}</p>
         </div>
-        <ButtonComponent buttonName={buttonName} buttonStyle={buttonStyle} />
+        <ButtonComponent
+          buttonName={buttonName}
+          buttonStyle={buttonStyle}
+          index={props.index}
+        />
       </div>
     </>
   );
