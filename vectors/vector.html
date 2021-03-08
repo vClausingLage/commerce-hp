@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vectors</title>
+</head>
+<body>
+  
+  <svg id="line" height="300" width="300" style="border: 1px solid black">
+
+  </svg>
+
+  <svg id="svg" height="300" width="300" style="border: 1px solid black">
+    <!-- <circle cx="150" cy="150" r="100" stroke="rgb(128, 0, 0)" stroke-width="10" fill="white" /> -->
+    <polygon points="100,10 200,70 100,130" style="fill:lime;stroke:purple;stroke-width:1" />
+  </svg> 
+
+
+<script>
+  const number = 3
+  const polygon = document.createElementNS('http://www.w3.org/2000/svg','polygon');
+  const anker = document.querySelector('#line');
+  for (let i = 0; i < number; i++) {
+  polygon.setAttributeNS(null,'points', '0,30 10,10 20,30')
+  polygon.setAttributeNS(null,'style', 'fill:rgb(128, 0, 0);stroke:purple;stroke-width:1')
+  }
+
+  anker.appendChild(polygon)
+  
+</script>
+</body>
+</html>

@@ -5,6 +5,7 @@ import './index.css';
 import Landing from '../components/landing';
 import Products from '../components/products';
 import Cart from '../components/cart';
+import About from '../components/about';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           <Link className='navBtn' to={'/products'}>
             Products
           </Link>
+          <Link className='navBtn' to={'/about'}>
+            About
+          </Link>
           <Link className='navBtn' to={'/cart'}>
             Cart
           </Link>
@@ -31,6 +35,9 @@ function App() {
           </Route>
           <Route path={'/cart'}>
             <Cart />
+          </Route>
+          <Route path={'/about'}>
+            <About />
           </Route>
           <Route path={'/'}>
             <Landing />

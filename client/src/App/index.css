@@ -97,7 +97,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #a631aa;
+  color: var(--color-red);
 }
 
 figure {
@@ -134,9 +134,13 @@ img {
 .navBtn {
   display: flex;
   color: white;
+  font-size: larger;
   padding: 1rem;
   background-color: var(--color-red);
   margin-left: 1rem;
+}
+.navBtn:hover {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* FLEX N GRID */
@@ -221,5 +225,9 @@ img {
     cursor: pointer;
     border: none;
     box-shadow: 3px 3px 3px gray;
+  }
+  .card-button:hover {
+    background-color: var(--color-lightgray);
+    color: var(--color-red);
   }
 }

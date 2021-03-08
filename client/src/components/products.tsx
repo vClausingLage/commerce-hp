@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from './card.component';
 
 function Products() {
@@ -21,6 +20,13 @@ function Products() {
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam',
       price: 20,
       picture: '/images/pic3.jpg',
+    },
+    {
+      title: 'Product 3',
+      description:
+        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam',
+      price: 40,
+      picture: '/images/pic4.jpg',
     },
   ];
 
