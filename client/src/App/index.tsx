@@ -1,5 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from 'react-router-dom';
 import './index.css';
 
 import Landing from '../components/landing';
@@ -13,20 +17,36 @@ function App() {
       <Router>
         <nav className='flex nav'>
           <figure>
-            <img alt='dat logo' src='/images/logo.jpeg' className='logo' />
+            <img alt='dat logo' src='/images/Logo.svg' className='logo' />
           </figure>
-          <Link className='navBtn' to={'/'}>
+          <NavLink
+            className='navBtn'
+            to={'/home'}
+            activeStyle={{ color: 'blue' }}
+          >
             Home
-          </Link>
-          <Link className='navBtn' to={'/products'}>
+          </NavLink>
+          <NavLink
+            className='navBtn'
+            to={'/products'}
+            activeStyle={{ color: 'blue' }}
+          >
             Products
-          </Link>
-          <Link className='navBtn' to={'/about'}>
+          </NavLink>
+          <NavLink
+            className='navBtn'
+            to={'/about'}
+            activeStyle={{ color: 'blue' }}
+          >
             About
-          </Link>
-          <Link className='navBtn' to={'/cart'}>
+          </NavLink>
+          <NavLink
+            className='navBtn'
+            to={'/cart'}
+            activeStyle={{ color: 'blue' }}
+          >
             Cart
-          </Link>
+          </NavLink>
         </nav>
 
         <Switch>

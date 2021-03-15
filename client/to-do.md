@@ -2,6 +2,5 @@
 
 ## Frontend
 
-- current active Link style
+- lanfing page address || active link on home
 - reducers
-  - [Link](https://www.valentinog.com/blog/redux/#refactoring-the-reducer)

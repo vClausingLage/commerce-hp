@@ -129,6 +129,8 @@ img {
 
 .logo {
   height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
 }
 
 .navBtn {
