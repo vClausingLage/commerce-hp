@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,6 +13,9 @@ import Cart from '../components/cart';
 import About from '../components/about';
 
 function App() {
+  const user = 'well known User';
+  const [cart, addCart] = useState([]);
+
   return (
     <>
       <Router>
@@ -21,7 +25,8 @@ function App() {
           </figure>
           <NavLink
             className='navBtn'
-            to={'/home'}
+            to={'/'}
+            exact={true}
             activeStyle={{ color: 'blue' }}
           >
             Home
@@ -54,7 +59,7 @@ function App() {
             <Products />
           </Route>
           <Route path={'/cart'}>
-            <Cart />
+            <Cart user={user} />
           </Route>
           <Route path={'/about'}>
             <About />

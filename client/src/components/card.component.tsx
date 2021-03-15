@@ -30,7 +30,7 @@ const ButtonComponent: React.FunctionComponent<ButtonProps> = (props) => {
 
 const Card: React.FunctionComponent<CardProps> = (props) => {
   let alt = 'product thumbnail';
-  let buttonName = 'to cart...';
+  let buttonNameCart = 'to cart...';
   let buttonStyle = 'card-button';
 
   return (
@@ -48,7 +48,7 @@ const Card: React.FunctionComponent<CardProps> = (props) => {
           <p>{props.description}</p>
         </div>
         <ButtonComponent
-          buttonName={buttonName}
+          buttonName={buttonNameCart}
           buttonStyle={buttonStyle}
           index={props.index}
         />
